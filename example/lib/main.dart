@@ -16,12 +16,11 @@ class MyApp extends StatelessWidget {
         builder: (context) {
           return Scaffold(
             appBar: AppBar(
-              title: Text(
-                'vennue',
-                selectionColor: Theme.of(context).colorScheme.tertiary,
-              ),
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              titleTextStyle: Theme.of(context).textTheme.displaySmall,
+              title: const Text('bop'),
+              titleTextStyle:
+                  Theme.of(context).textTheme.displaySmall?.copyWith(
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
             ),
             body: Container(
               padding: const EdgeInsets.all(8),
@@ -33,7 +32,10 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Expanded(
-                        child: BopContent('This is some content in a box'),
+                        child: BopContent(
+                          'This is some content in a box, it\'s long enough '
+                          'to span multiple lines',
+                        ),
                       ),
                       const SizedBox(width: 4),
                       Expanded(
@@ -45,12 +47,9 @@ class MyApp extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 4),
-                      Expanded(
-                        child: BopButton(
-                          leading: const Icon(Icons.pin_drop_outlined),
-                          content: 'Location over here',
-                          onPressed: () {},
-                        ),
+                      BopIconButton(
+                        child: const Icon(Icons.arrow_forward_rounded),
+                        onPressed: () {},
                       ),
                       const SizedBox(width: 4),
                       Expanded(

@@ -1,4 +1,4 @@
-import 'package:bop/theme/bop_theme.dart';
+import 'package:bop/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class BopApp extends StatelessWidget {
