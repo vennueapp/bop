@@ -8,11 +8,9 @@ on:
 jobs:
   publish:
     name: Publish to pub.dev
-    runs-on: ubuntu-latest
     permissions:
       id-token: write
-    steps:
-    - uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
   release:
     name: Create release
     needs: publish
