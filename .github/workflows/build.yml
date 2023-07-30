@@ -41,5 +41,5 @@ jobs:
     - uses: actions/checkout@v3
     - uses: 'jacopocarlini/action-autotag@3.0.0'
       with:
-        GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        GITHUB_TOKEN: '${{ secrets.TAG_PAT }}'
         tag_prefix: 'v'
